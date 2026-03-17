@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elite Soccer Training NJ | CNTRL Futbol</title>
+<meta name="description" content="Elite individual and small-group technical soccer training in Northern NJ. Built by a former pro. Passaic, Bergen, Morris & Essex County.">
+<meta property="og:title" content="Elite Soccer Training NJ | CNTRL Futbol">
+<meta property="og:description" content="Elite individual and small-group technical soccer training in Northern NJ. Built by a former pro. Passaic, Bergen, Morris & Essex County.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cntrlfutbol.com/">
+<meta property="og:image" content="https://cntrlfutbol.com/images/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://cntrlfutbol.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.hero{min-height:100vh;padding:160px 7vw 100px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;}
+.hero-content{position:relative;z-index:1;}
+.hero-img-wrap{position:absolute;inset:0;z-index:0;}
+.hero-img-wrap img,.hero-img-wrap .img-placeholder{width:100%;height:100%;object-fit:cover;opacity:.22;aspect-ratio:unset;}
+.hero-tag{font-size:.65rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);margin-bottom:28px;opacity:0;animation:fadeUp .6s .1s forwards;opacity:.8;}
+.hero-title{font-family:var(--display);font-size:clamp(4.5rem,12vw,11rem);line-height:.88;letter-spacing:.04em;text-transform:uppercase;margin-bottom:40px;opacity:0;animation:fadeUp .75s .25s forwards;}
+.hero-title em{font-style:normal;color:var(--accent);}
+.hero-sub{max-width:500px;font-size:.95rem;font-weight:300;color:rgba(241,241,241,.62);margin-bottom:52px;line-height:1.8;opacity:0;animation:fadeUp .7s .45s forwards;}
+.hero-cta-row{display:flex;align-items:center;gap:20px;flex-wrap:wrap;opacity:0;animation:fadeUp .7s .6s forwards;}
+.hero-stat-bar{display:flex;gap:48px;border-top:1px solid rgba(219,201,180,.1);padding-top:48px;margin-top:72px;flex-wrap:wrap;opacity:0;animation:fadeUp .7s .78s forwards;}
+.stat{display:flex;flex-direction:column;gap:4px;}
+.stat-num{font-family:var(--display);font-size:2.8rem;color:var(--accent);line-height:1;letter-spacing:.04em;}
+.stat-label{font-size:.62rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);}
+/* beige accent line across hero */
+.hero-accent-line{position:absolute;bottom:0;left:7vw;right:7vw;height:1px;background:linear-gradient(90deg,transparent,rgba(219,201,180,.2),transparent);z-index:1;}
+</style><style>
+/* bg word */
+.hero-bg-word{position:absolute;right:-4vw;top:50%;transform:translateY(-50%);font-family:var(--display);font-size:clamp(14rem,24vw,24rem);color:rgba(219,201,180,.025);letter-spacing:-.02em;pointer-events:none;user-select:none;white-space:nowrap;z-index:0;}
+.hero-scroll{margin-top:64px;display:flex;align-items:center;gap:14px;font-size:.65rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);opacity:0;animation:fadeUp .6s .95s forwards;}
+.hero-scroll-line{width:48px;height:1px;background:var(--muted);}
+/* photo strip */
+.photo-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;}
+@media(max-width:640px){.photo-strip{grid-template-columns:1fr 1fr;}}
+.photo-strip .img-placeholder,.photo-strip img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;transition:opacity .3s;}
+.photo-strip img:hover{opacity:.8;}
+/* method */
+.method{padding:100px 7vw;background:var(--gray);}
+.method-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:56px;}
+@media(max-width:768px){.method-grid{grid-template-columns:1fr;}}
+.method-card{background:var(--black);padding:52px 40px;position:relative;overflow:hidden;}
+.method-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .4s ease;}
+.method-card:hover::before{transform:scaleX(1);}
+.method-num{font-family:var(--display);font-size:5rem;color:rgba(219,201,180,.07);line-height:1;margin-bottom:20px;letter-spacing:.04em;}
+.method-title{font-family:var(--display);font-size:2rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px;}
+.method-body{font-size:.84rem;color:rgba(241,241,241,.5);line-height:1.8;}
+/* who */
+.who{padding:100px 7vw;}
+.who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:56px;}
+@media(max-width:768px){.who-grid{grid-template-columns:1fr;}}
+.who-card{background:var(--gray);padding:48px 40px;border-bottom:2px solid transparent;transition:border-color .25s,background .2s;}
+.who-card:hover{border-bottom-color:var(--accent);background:var(--mid);}
+.who-age{font-family:var(--display);font-size:3.5rem;color:rgba(219,201,180,.12);line-height:1;margin-bottom:16px;}
+.who-title{font-family:var(--display);font-size:1.6rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;}
+.who-body{font-size:.84rem;color:rgba(241,241,241,.5);line-height:1.75;margin-bottom:18px;}
+.who-focus{font-size:.64rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);opacity:.7;}
+/* training cards */
+.training{padding:100px 7vw;background:var(--gray);}
+.training-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:56px;}
+@media(max-width:860px){.training-grid{grid-template-columns:1fr;}}
+.training-card{background:var(--black);padding:48px 40px;display:flex;flex-direction:column;text-decoration:none;color:var(--white);position:relative;overflow:hidden;transition:background .2s;}
+.training-card-arrow{position:absolute;bottom:40px;right:40px;font-size:1.4rem;color:var(--accent);opacity:0;transform:translateX(-10px);transition:opacity .25s,transform .25s;}
+.training-card:hover{background:#060606;}
+.training-card:hover .training-card-arrow{opacity:1;transform:translateX(0);}
+.training-type{font-size:.62rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);opacity:.7;margin-bottom:16px;}
+.training-name{font-family:var(--display);font-size:2rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px;}
+.training-desc{font-size:.84rem;color:rgba(241,241,241,.5);line-height:1.75;flex:1;margin-bottom:28px;}
+.training-detail{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(241,241,241,.22);font-weight:400;}
+/* about strip */
+.about-strip{padding:100px 7vw;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+@media(max-width:768px){.about-strip{grid-template-columns:1fr;gap:48px;}}
+.about-strip-title{font-family:var(--display);font-size:clamp(3rem,5.5vw,5.5rem);line-height:.93;letter-spacing:.04em;text-transform:uppercase;margin-bottom:24px;}
+.about-strip-body{font-size:.92rem;color:rgba(241,241,241,.6);line-height:1.85;margin-bottom:36px;}
+.about-strip-body p+p{margin-top:16px;}
+.credentials{display:flex;flex-direction:column;gap:1px;}
+.credential-item{background:var(--gray);padding:14px 20px;font-size:.8rem;color:rgba(241,241,241,.5);border-left:2px solid transparent;transition:border-color .2s,color .2s,padding-left .2s;}
+.credential-item:hover{border-left-color:var(--accent);color:var(--white);padding-left:26px;}
+/* locations */
+.locations{padding:80px 7vw;background:var(--gray);}
+.locations-row{display:flex;gap:1px;margin-top:44px;flex-wrap:wrap;}
+.location-pill{background:var(--black);padding:22px 32px;font-family:var(--display);font-size:1.3rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(241,241,241,.3);transition:color .2s,background .2s;flex:1;min-width:180px;text-align:center;}
+.location-pill:hover{background:var(--mid);color:var(--accent);}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">
+    CNTRL<span class="nav-logo-sub">Futbol</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li class="nav-dropdown">
+      <button class="nav-dropdown-toggle">Training
+        <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg>
+      </button>
+      <div class="nav-dropdown-menu">
+        <a href="private-training.html" >Private Training</a>
+        <a href="small-group.html" >Small Group Training</a>
+        <a href="team-training.html" >Team &amp; Skills Training</a>
+      </div>
+    </li>
+    <li><a href="about.html" >About</a></li>
+    <li><a href="contact.html" >Contact</a></li>
+    <li><a href="contact.html" class="nav-cta">Book Evaluation</a></li>
+  </ul>
+  <button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="private-training.html" class="mobile-sub">Private Training</a>
+  <a href="small-group.html" class="mobile-sub">Small Group</a>
+  <a href="team-training.html" class="mobile-sub">Team &amp; Skills</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" style="color:var(--accent);margin-top:8px;">Book Evaluation →</a>
+</div>
+<section class="hero">
+  <div class="hero-img-wrap">
+    <div class="img-placeholder" style="width:100%;aspect-ratio:unset;">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+  <span class="ph-label">Hero background — action shot or field photo</span>
+  <span class="ph-code">images/hero-bg.jpg</span>
+</div>
+  </div>
+  <div class="hero-bg-word">CNTRL</div>
+  <div class="hero-content">
+    <p class="hero-tag">Northern New Jersey · Elite Technical Training</p>
+    <h1 class="hero-title">Control<br>Creates<br><em>Confidence.</em></h1>
+    <p class="hero-sub">Elite individual and small-group technical training designed to develop intelligent, composed, high-level players.</p>
+    <div class="hero-cta-row">
+      <a href="contact.html" class="btn-primary">Book Free Evaluation</a>
+      <a href="private-training.html" class="btn-ghost">View Training</a>
+    </div>
+    <div class="hero-scroll"><span class="hero-scroll-line"></span>Scroll to explore</div>
+  </div>
+  <div class="hero-accent-line"></div>
+</section>
+
+<div class="photo-strip">
+  <div class="img-placeholder" style="width:100%;aspect-ratio:3/4;">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+  <span class="ph-label">Action shot 1</span>
+  <span class="ph-code">images/action-1.jpg</span>
+</div>
+  <div class="img-placeholder" style="width:100%;aspect-ratio:3/4;">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+  <span class="ph-label">Action shot 2</span>
+  <span class="ph-code">images/action-2.jpg</span>
+</div>
+  <div class="img-placeholder" style="width:100%;aspect-ratio:3/4;">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+  <span class="ph-label">Action shot 3</span>
+  <span class="ph-code">images/action-3.jpg</span>
+</div>
+  <div class="img-placeholder" style="width:100%;aspect-ratio:3/4;">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+  <span class="ph-label">Action shot 4</span>
+  <span class="ph-code">images/action-4.jpg</span>
+</div>
+</div>
+
+<section class="method reveal">
+  <p class="section-label">The CNTRL Method</p>
+  <h2 class="section-title">Three Pillars of Development</h2>
+  <div class="method-grid">
+    <div class="method-card"><div class="method-num">01</div><div class="method-title">Control the Ball</div><div class="method-body">First touch. Body shape. Receiving under pressure. Technical clarity in tight spaces. If you can't control the ball, nothing else matters.</div></div>
+    <div class="method-card"><div class="method-num">02</div><div class="method-title">Control the Body</div><div class="method-body">Balance. Deceleration. Strength through range. Efficient movement. Clean mechanics. Power without chaos. Your body must support your decisions.</div></div>
+    <div class="method-card"><div class="method-num">03</div><div class="method-title">Control the Mind</div><div class="method-body">Decision-making. Tempo. Patience. Training with intent. Long-term thinking. No shortcuts. The game rewards those who think clearly and prepare consistently.</div></div>
+  </div>
+</section>
+
+<section class="who reveal">
+  <p class="section-label">Who We Train</p>
+  <h2 class="section-title">Every Level. One Standard.</h2>
+  <div class="who-grid">
+    <div class="who-card"><div class="who-age">5–10</div><div class="who-title">Foundational Development</div><div class="who-body">Players beginning their competitive journey who want to build the right habits early. First touch. Ball mastery. Confidence under pressure.</div><div class="who-focus">Control before speed</div></div>
+    <div class="who-card"><div class="who-age">11–18</div><div class="who-title">Competitive Youth &amp; High School</div><div class="who-body">Serious players at club, travel, or high school levels ready to refine their game. Decision-making. Tempo. Receiving under pressure.</div><div class="who-focus">Built for long-term growth</div></div>
+    <div class="who-card"><div class="who-age">18+</div><div class="who-title">Academy &amp; College-Level</div><div class="who-body">Advanced players in academy environments or preparing for collegiate competition. Efficiency. Tactical awareness. Professional standards.</div><div class="who-focus">Aligned with elite expectations</div></div>
+  </div>
+</section>
+
+<section class="training reveal">
+  <p class="section-label">Training Programs</p>
+  <h2 class="section-title">Find Your Session</h2>
+  <div class="training-grid">
+    <a href="private-training.html" class="training-card"><div class="training-type">1-on-1</div><div class="training-name">Private Training</div><div class="training-desc">Entirely focused on you. No waiting. No splitting attention. Every minute intentional and built around your game.</div><div class="training-detail">Starting at $80 / session</div><span class="training-card-arrow">→</span></a>
+    <a href="small-group.html" class="training-card"><div class="training-type">2–4 Players</div><div class="training-name">Small Group Training</div><div class="training-desc">Individual attention meets live competition. Real pressure, competitive reps, and the standard that comes from training alongside serious players.</div><div class="training-detail">Starting at $45 / player</div><span class="training-card-arrow">→</span></a>
+    <a href="team-training.html" class="training-card"><div class="training-type">Full Team</div><div class="training-name">Team &amp; Skills Training</div><div class="training-desc">Custom technical sessions for youth club, travel, and high school programs. Built around your team's specific needs.</div><div class="training-detail">Starting at $200 / session</div><span class="training-card-arrow">→</span></a>
+  </div>
+</section>
+
+<section class="about-strip reveal">
+  <div>
+    <p class="section-label">About CNTRL</p>
+    <h2 class="about-strip-title">Built From Experience.</h2>
+    <div class="about-strip-body">
+      <p>CNTRL was founded by a former professional player and NJ native who has trained alongside players now representing the United States on the world stage.</p>
+      <p>The standard was never loud. It was consistent. That standard is now available to players in Northern New Jersey who are ready for it.</p>
+    </div>
+    <a href="about.html" class="btn-ghost">Meet the Founder</a>
+  </div>
+  <div class="credentials reveal">
+    <div class="credential-item">U14–U17 US Youth National Team</div>
+    <div class="credential-item">NY Red Bull Academy (USDA)</div>
+    <div class="credential-item">University of South Carolina / Syracuse (NCAA D-I)</div>
+    <div class="credential-item">Ocean City Nor'Easters (USL League Two)</div>
+    <div class="credential-item">Wilmington Hammerheads (USL Championship)</div>
+    <div class="credential-item">Nordvarmlands FF (Sweden Division 2)</div>
+  </div>
+</section>
+
+<section class="locations reveal">
+  <p class="section-label">Where We Train</p>
+  <h2 class="section-title">Northern New Jersey</h2>
+  <div class="locations-row">
+    <div class="location-pill">Passaic County</div>
+    <div class="location-pill">Bergen County</div>
+    <div class="location-pill">Morris County</div>
+    <div class="location-pill">Essex County</div>
+  </div>
+</section>
+
+<div class="cta-band reveal">
+  <div><div class="cta-band-title">Ready to train at the highest level?</div><div class="cta-band-sub">Book your free evaluation. We'll assess where you are, build a plan, and get to work.</div></div>
+  <a href="contact.html" class="btn-dark">Book Free Evaluation</a>
+</div>
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">CNTRL</div>
+      <div class="footer-brand-sub">Futbol</div>
+      <div class="footer-tagline">Elite technical soccer training in Northern New Jersey. Built on experience. Built on standards.</div>
+      <div class="footer-contact-item"><a href="mailto:info@cntrlfutbol.com">info@cntrlfutbol.com</a></div>
+      <div class="footer-contact-item"><a href="tel:9735708254">(973) 570-8254</a></div>
+    </div>
+    <div>
+      <div class="footer-col-title">Training</div>
+      <ul class="footer-links">
+        <li><a href="private-training.html">Private Training</a></li>
+        <li><a href="small-group.html">Small Group</a></li>
+        <li><a href="team-training.html">Team &amp; Skills</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html">Book Evaluation</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Locations</div>
+      <ul class="footer-links">
+        <li><a href="#">Passaic County NJ</a></li>
+        <li><a href="#">Bergen County NJ</a></li>
+        <li><a href="#">Morris County NJ</a></li>
+        <li><a href="#">Essex County NJ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 CNTRL Futbol. All rights reserved.</span>
+    <span>Northern New Jersey</span>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body></html>

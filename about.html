@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About CNTRL Futbol | Soccer Trainer NJ</title>
+<meta name="description" content="CNTRL Futbol was founded by a former professional player — US Youth National Team, NCAA D-I, and professional experience. Now training Northern NJ.">
+<meta property="og:title" content="About CNTRL Futbol | Soccer Trainer NJ">
+<meta property="og:description" content="CNTRL Futbol was founded by a former professional player — US Youth National Team, NCAA D-I, and professional experience. Now training Northern NJ.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cntrlfutbol.com/">
+<meta property="og:image" content="https://cntrlfutbol.com/images/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://cntrlfutbol.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.hero{min-height:100vh;padding:160px 7vw 100px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;}
+.hero-content{position:relative;z-index:1;}
+.hero-img-wrap{position:absolute;inset:0;z-index:0;}
+.hero-img-wrap img,.hero-img-wrap .img-placeholder{width:100%;height:100%;object-fit:cover;opacity:.22;aspect-ratio:unset;}
+.hero-tag{font-size:.65rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);margin-bottom:28px;opacity:0;animation:fadeUp .6s .1s forwards;opacity:.8;}
+.hero-title{font-family:var(--display);font-size:clamp(4.5rem,12vw,11rem);line-height:.88;letter-spacing:.04em;text-transform:uppercase;margin-bottom:40px;opacity:0;animation:fadeUp .75s .25s forwards;}
+.hero-title em{font-style:normal;color:var(--accent);}
+.hero-sub{max-width:500px;font-size:.95rem;font-weight:300;color:rgba(241,241,241,.62);margin-bottom:52px;line-height:1.8;opacity:0;animation:fadeUp .7s .45s forwards;}
+.hero-cta-row{display:flex;align-items:center;gap:20px;flex-wrap:wrap;opacity:0;animation:fadeUp .7s .6s forwards;}
+.hero-stat-bar{display:flex;gap:48px;border-top:1px solid rgba(219,201,180,.1);padding-top:48px;margin-top:72px;flex-wrap:wrap;opacity:0;animation:fadeUp .7s .78s forwards;}
+.stat{display:flex;flex-direction:column;gap:4px;}
+.stat-num{font-family:var(--display);font-size:2.8rem;color:var(--accent);line-height:1;letter-spacing:.04em;}
+.stat-label{font-size:.62rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);}
+/* beige accent line across hero */
+.hero-accent-line{position:absolute;bottom:0;left:7vw;right:7vw;height:1px;background:linear-gradient(90deg,transparent,rgba(219,201,180,.2),transparent);z-index:1;}
+</style><style>
+.split{padding:100px 7vw;background:var(--gray);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
+@media(max-width:768px){.split{grid-template-columns:1fr;gap:48px;}}
+.split-body{font-size:.9rem;color:rgba(241,241,241,.6);line-height:1.85;}
+.split-body p+p{margin-top:18px;}
+.side-cards{display:flex;flex-direction:column;gap:1px;}
+.side-card{background:var(--black);padding:26px 30px;border-left:2px solid transparent;transition:border-color .25s,background .2s,padding-left .2s;}
+.side-card:hover{border-left-color:var(--accent);background:#080808;padding-left:36px;}
+.side-card-title{font-family:var(--display);font-size:1.4rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px;}
+.side-card-body{font-size:.82rem;color:rgba(241,241,241,.45);line-height:1.7;}
+.grid-4{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;margin-top:56px;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:56px;}
+@media(max-width:640px){.grid-2{grid-template-columns:1fr;}}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:52px;}
+@media(max-width:768px){.grid-3{grid-template-columns:1fr;}}
+/* numbered card */
+.num-card{background:var(--gray);padding:48px 40px;position:relative;overflow:hidden;transition:background .2s;}
+.num-card::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .35s;}
+.num-card:hover{background:var(--mid);}
+.num-card:hover::after{transform:scaleX(1);}
+.num-card-n{font-family:var(--display);font-size:4rem;color:rgba(219,201,180,.08);line-height:1;margin-bottom:16px;letter-spacing:.04em;}
+.num-card-title{font-family:var(--display);font-size:1.7rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;}
+.num-card-body{font-size:.84rem;color:rgba(241,241,241,.5);line-height:1.75;}
+/* top-border card */
+.top-card{background:var(--black);padding:44px 38px;border-top:2px solid rgba(241,241,241,.06);transition:border-top-color .2s,background .2s;}
+.top-card:hover{border-top-color:var(--accent);background:#060606;}
+.top-card-title{font-family:var(--display);font-size:1.6rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;}
+.top-card-body{font-size:.84rem;color:rgba(241,241,241,.5);line-height:1.75;}
+.top-card-detail{font-size:.62rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);opacity:.65;margin-top:14px;}
+/* step card */
+.step-card{background:var(--gray);padding:44px 38px;position:relative;}
+.step-card-num{font-family:var(--display);font-size:4.5rem;color:rgba(219,201,180,.06);line-height:1;margin-bottom:16px;}
+.step-card-title{font-family:var(--display);font-size:1.5rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;}
+.step-card-body{font-size:.84rem;color:rgba(241,241,241,.5);line-height:1.75;}
+/* price card */
+.price-card{background:var(--gray);padding:52px 44px;}
+.price-note{margin-top:36px;font-size:.78rem;color:var(--muted);max-width:640px;line-height:1.7;}
+/* audience card */
+.audience-card{background:var(--gray);padding:52px 44px;}
+.audience-num{font-family:var(--display);font-size:5rem;color:rgba(219,201,180,.06);line-height:1;margin-bottom:-4px;}
+.audience-title{font-family:var(--display);font-size:2rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px;}
+.audience-body{font-size:.88rem;color:rgba(241,241,241,.55);line-height:1.8;}
+.audience-detail{margin-top:18px;font-size:.62rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);opacity:.65;}
+/* session tags */
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px;}
+.tag{font-size:.62rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(219,201,180,.2);color:rgba(219,201,180,.55);padding:5px 12px;}
+/* split with image */
+.split-img{padding:100px 7vw;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+@media(max-width:768px){.split-img{grid-template-columns:1fr;gap:48px;}}
+/* dark section */
+.dark-section{padding:100px 7vw;background:var(--gray);}
+.light-section{padding:100px 7vw;}
+</style><style>
+.about-hero-title{font-family:var(--display);font-size:clamp(4rem,10vw,9rem);line-height:.88;letter-spacing:.04em;text-transform:uppercase;margin-bottom:36px;opacity:0;animation:fadeUp .75s .25s forwards;}
+.about-hero-title em{font-style:normal;color:var(--accent);}
+.about-hero-sub{max-width:600px;font-size:.95rem;color:rgba(241,241,241,.6);line-height:1.85;opacity:0;animation:fadeUp .7s .45s forwards;}
+.about-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;}
+@media(max-width:600px){.about-photos{grid-template-columns:1fr 1fr;}}
+.about-photos .img-placeholder,.about-photos img{width:100%;aspect-ratio:1/1;object-fit:cover;}
+.founder-section{padding:100px 7vw;background:var(--gray);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
+@media(max-width:768px){.founder-section{grid-template-columns:1fr;gap:48px;}}
+.founder-name{font-family:var(--display);font-size:3.5rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;}
+.founder-role{font-size:.65rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);opacity:.7;margin-bottom:36px;}
+.founder-body{font-size:.9rem;color:rgba(241,241,241,.6);line-height:1.85;}
+.founder-body p+p{margin-top:18px;}
+.founder-quote{margin-top:40px;padding:28px 32px;border-left:2px solid var(--accent);background:var(--mid);}
+.founder-quote p{font-size:1rem;font-style:italic;color:rgba(241,241,241,.7);line-height:1.8;}
+.resume-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:52px;}
+@media(max-width:640px){.resume-grid{grid-template-columns:1fr;}}
+.resume-card{background:var(--gray);padding:36px 32px;}
+.resume-card-title{font-size:.62rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);opacity:.7;margin-bottom:20px;}
+.resume-items{display:flex;flex-direction:column;gap:1px;}
+.resume-item{background:var(--mid);padding:14px 18px;font-size:.84rem;color:rgba(241,241,241,.55);border-left:2px solid transparent;transition:border-color .2s,color .2s,padding-left .2s;}
+.resume-item:hover{border-left-color:var(--accent);color:var(--white);padding-left:24px;}
+.staff-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1px;margin-top:52px;}
+.staff-card{background:var(--black);padding:48px 40px;display:grid;grid-template-columns:96px 1fr;gap:28px;align-items:start;}
+@media(max-width:480px){.staff-card{grid-template-columns:1fr;}}
+.staff-photo,.staff-photo .img-placeholder{width:96px;height:96px;object-fit:cover;display:block;}
+.staff-name{font-family:var(--display);font-size:2rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px;}
+.staff-role{font-size:.62rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);opacity:.7;margin-bottom:14px;}
+.staff-body{font-size:.84rem;color:rgba(241,241,241,.5);line-height:1.75;}
+.staff-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;}
+.staff-tag{font-size:.6rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(241,241,241,.1);color:rgba(241,241,241,.35);padding:4px 10px;}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:52px;}
+@media(max-width:768px){.values-grid{grid-template-columns:1fr;}}
+.value-card{background:var(--gray);padding:48px 40px;position:relative;}
+.value-card::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .35s;}
+.value-card:hover::after{transform:scaleX(1);}
+.value-icon{font-family:var(--display);font-size:4rem;color:rgba(219,201,180,.07);line-height:1;margin-bottom:16px;}
+.value-title{font-family:var(--display);font-size:1.8rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;}
+.value-body{font-size:.84rem;color:rgba(241,241,241,.5);line-height:1.8;}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">
+    CNTRL<span class="nav-logo-sub">Futbol</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" >Home</a></li>
+    <li class="nav-dropdown">
+      <button class="nav-dropdown-toggle">Training
+        <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg>
+      </button>
+      <div class="nav-dropdown-menu">
+        <a href="private-training.html" >Private Training</a>
+        <a href="small-group.html" >Small Group Training</a>
+        <a href="team-training.html" >Team &amp; Skills Training</a>
+      </div>
+    </li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="contact.html" >Contact</a></li>
+    <li><a href="contact.html" class="nav-cta">Book Evaluation</a></li>
+  </ul>
+  <button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="private-training.html" class="mobile-sub">Private Training</a>
+  <a href="small-group.html" class="mobile-sub">Small Group</a>
+  <a href="team-training.html" class="mobile-sub">Team &amp; Skills</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" style="color:var(--accent);margin-top:8px;">Book Evaluation →</a>
+</div>
+<section class="hero" style="min-height:70vh;">
+  <div class="hero-content">
+    <p class="hero-tag">About CNTRL Futbol</p>
+    <h1 class="about-hero-title">Built From<br><em>Experience.</em></h1>
+    <p class="about-hero-sub">CNTRL was founded by a former professional player and NJ native who has trained and competed alongside players now representing the United States on the world stage. The standard at that level was never loud. It was consistent, detail-oriented, and demanding. That's what we bring to every session.</p>
+  </div>
+  <div class="hero-accent-line"></div>
+</section>
+
+<div class="about-photos">
+  <div class="img-placeholder" style="width:100%;aspect-ratio:1/1;">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+  <span class="ph-label">Kyle training photo 1</span>
+  <span class="ph-code">images/kyle-1.jpg</span>
+</div>
+  <div class="img-placeholder" style="width:100%;aspect-ratio:1/1;">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+  <span class="ph-label">Kyle training photo 2</span>
+  <span class="ph-code">images/kyle-2.jpg</span>
+</div>
+  <div class="img-placeholder" style="width:100%;aspect-ratio:1/1;">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+  <span class="ph-label">Kyle professional photo</span>
+  <span class="ph-code">images/kyle-3.jpg</span>
+</div>
+</div>
+
+<section class="founder-section reveal">
+  <div><div class="img-placeholder" style="width:100%;aspect-ratio:3/4;">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+  <span class="ph-label">Main founder photo — portrait or action</span>
+  <span class="ph-code">images/kyle-main.jpg</span>
+</div></div>
+  <div>
+    <div class="founder-name">Kyle Gurrieri</div>
+    <div class="founder-role">Founder &amp; Head Coach</div>
+    <div class="founder-body">
+      <p>Kyle is a New Jersey native and former professional player with experience at the highest levels of the American development pathway.</p>
+      <p>He competed at the U.S. Youth National Team level from U14 through U17, training and playing alongside athletes who now represent the United States on the world stage. That environment set the benchmark early — elite performance is built on discipline, tactical intelligence, and daily technical refinement.</p>
+      <p>He continued his career at the NCAA Division I level before earning the opportunity to train and compete professionally in both the United States and Sweden. Experiencing the full progression from youth soccer to college to the national team to the professional game provided firsthand insight into what truly separates players as they advance.</p>
+      <p>CNTRL is built on that experience. Built on accountability. Built on standards.</p>
+    </div>
+    <div class="founder-quote"><p>"The standard was never loud. It was consistent. That's what we bring to every session."</p></div>
+    <br>
+    <a href="contact.html" class="btn-primary">Work With Kyle</a>
+  </div>
+</section>
+
+<section class="light-section reveal">
+  <p class="section-label">Playing Background</p><h2 class="section-title">The Resume</h2>
+  <div class="resume-grid">
+    <div class="resume-card"><div class="resume-card-title">Youth &amp; National Team</div><div class="resume-items"><div class="resume-item">U14–U17 US Youth National Team</div><div class="resume-item">NY Red Bull Academy (USDA)</div><div class="resume-item">Cedar Stars Academy (USDA)</div></div></div>
+    <div class="resume-card"><div class="resume-card-title">College</div><div class="resume-items"><div class="resume-item">University of South Carolina (NCAA D-I)</div><div class="resume-item">Syracuse University (NCAA D-I)</div></div></div>
+    <div class="resume-card"><div class="resume-card-title">Professional (USA)</div><div class="resume-items"><div class="resume-item">Ocean City Nor'Easters (USL League Two)</div><div class="resume-item">Wilmington Hammerheads (USL Championship)</div></div></div>
+    <div class="resume-card"><div class="resume-card-title">Professional (International)</div><div class="resume-items"><div class="resume-item">Nordvarmlands FF (Sweden Division 2)</div></div></div>
+  </div>
+</section>
+
+<section class="dark-section reveal">
+  <p class="section-label">Coaching Staff</p><h2 class="section-title">Meet the Team</h2>
+  <div class="staff-grid">
+    <div class="staff-card">
+      <div><div class="img-placeholder" style="width:100%;aspect-ratio:1/1;">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+  <span class="ph-label">Kyle headshot</span>
+  <span class="ph-code">images/kyle-headshot.jpg</span>
+</div></div>
+      <div><div class="staff-name">Kyle Gurrieri</div><div class="staff-role">Founder &amp; Head Coach</div><div class="staff-body">Former professional player with national team experience. Trained alongside current USMNT players. Brings elite-level standards to every session.</div><div class="staff-tags"><span class="staff-tag">USSF Licensed</span><span class="staff-tag">Pro Experience</span><span class="staff-tag">National Team</span></div></div>
+    </div>
+    <div class="staff-card">
+      <div><div class="img-placeholder" style="width:100%;aspect-ratio:1/1;">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+  <span class="ph-label">Stefan headshot</span>
+  <span class="ph-code">images/stefan-headshot.jpg</span>
+</div></div>
+      <div><div class="staff-name">Stefan Koroman</div><div class="staff-role">Coach</div><div class="staff-body">Former college player and current semi-professional. 6 years of coaching experience. USSF licensed with deep understanding of competitive youth development.</div><div class="staff-tags"><span class="staff-tag">USSF Licensed</span><span class="staff-tag">6 Yrs Coaching</span><span class="staff-tag">Semi-Pro Player</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="light-section reveal">
+  <p class="section-label">What We Stand For</p><h2 class="section-title">Built on Three Things</h2>
+  <div class="values-grid">
+    <div class="value-card"><div class="value-icon">01</div><div class="value-title">Experience</div><div class="value-body">Every session shaped by real firsthand experience at the highest levels of the game. Not textbook coaching — lived knowledge of what elite performance actually demands.</div></div>
+    <div class="value-card"><div class="value-icon">02</div><div class="value-title">Accountability</div><div class="value-body">We hold our players to a standard. And we hold ourselves to one too. If you put in the work, we will too — every session, every rep, every conversation.</div></div>
+    <div class="value-card"><div class="value-icon">03</div><div class="value-title">Standards</div><div class="value-body">CNTRL is not a camp. Not a recreational program. It is a technical environment built for players who are serious — and we treat every session with that seriousness.</div></div>
+  </div>
+</section>
+
+<div class="cta-band reveal"><div><div class="cta-band-title">Ready to work with us?</div><div class="cta-band-sub">Book your free evaluation and take the first step.</div></div><a href="contact.html" class="btn-dark">Book Free Evaluation</a></div>
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">CNTRL</div>
+      <div class="footer-brand-sub">Futbol</div>
+      <div class="footer-tagline">Elite technical soccer training in Northern New Jersey. Built on experience. Built on standards.</div>
+      <div class="footer-contact-item"><a href="mailto:info@cntrlfutbol.com">info@cntrlfutbol.com</a></div>
+      <div class="footer-contact-item"><a href="tel:9735708254">(973) 570-8254</a></div>
+    </div>
+    <div>
+      <div class="footer-col-title">Training</div>
+      <ul class="footer-links">
+        <li><a href="private-training.html">Private Training</a></li>
+        <li><a href="small-group.html">Small Group</a></li>
+        <li><a href="team-training.html">Team &amp; Skills</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html">Book Evaluation</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Locations</div>
+      <ul class="footer-links">
+        <li><a href="#">Passaic County NJ</a></li>
+        <li><a href="#">Bergen County NJ</a></li>
+        <li><a href="#">Morris County NJ</a></li>
+        <li><a href="#">Essex County NJ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 CNTRL Futbol. All rights reserved.</span>
+    <span>Northern New Jersey</span>
+  </div>
+</footer>
+<script src="js/main.js"></script></body></html>

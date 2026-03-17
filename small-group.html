@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Small Group Soccer Training NJ | CNTRL Futbol</title>
+<meta name="description" content="Small group soccer training in Northern NJ for 2–4 players. Starting at $45/player. Competitive intensity meets individual coaching.">
+<meta property="og:title" content="Small Group Soccer Training NJ | CNTRL Futbol">
+<meta property="og:description" content="Small group soccer training in Northern NJ for 2–4 players. Starting at $45/player. Competitive intensity meets individual coaching.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cntrlfutbol.com/">
+<meta property="og:image" content="https://cntrlfutbol.com/images/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://cntrlfutbol.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.hero{min-height:100vh;padding:160px 7vw 100px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;}
+.hero-content{position:relative;z-index:1;}
+.hero-img-wrap{position:absolute;inset:0;z-index:0;}
+.hero-img-wrap img,.hero-img-wrap .img-placeholder{width:100%;height:100%;object-fit:cover;opacity:.22;aspect-ratio:unset;}
+.hero-tag{font-size:.65rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);margin-bottom:28px;opacity:0;animation:fadeUp .6s .1s forwards;opacity:.8;}
+.hero-title{font-family:var(--display);font-size:clamp(4.5rem,12vw,11rem);line-height:.88;letter-spacing:.04em;text-transform:uppercase;margin-bottom:40px;opacity:0;animation:fadeUp .75s .25s forwards;}
+.hero-title em{font-style:normal;color:var(--accent);}
+.hero-sub{max-width:500px;font-size:.95rem;font-weight:300;color:rgba(241,241,241,.62);margin-bottom:52px;line-height:1.8;opacity:0;animation:fadeUp .7s .45s forwards;}
+.hero-cta-row{display:flex;align-items:center;gap:20px;flex-wrap:wrap;opacity:0;animation:fadeUp .7s .6s forwards;}
+.hero-stat-bar{display:flex;gap:48px;border-top:1px solid rgba(219,201,180,.1);padding-top:48px;margin-top:72px;flex-wrap:wrap;opacity:0;animation:fadeUp .7s .78s forwards;}
+.stat{display:flex;flex-direction:column;gap:4px;}
+.stat-num{font-family:var(--display);font-size:2.8rem;color:var(--accent);line-height:1;letter-spacing:.04em;}
+.stat-label{font-size:.62rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);}
+/* beige accent line across hero */
+.hero-accent-line{position:absolute;bottom:0;left:7vw;right:7vw;height:1px;background:linear-gradient(90deg,transparent,rgba(219,201,180,.2),transparent);z-index:1;}
+</style><style>
+.split{padding:100px 7vw;background:var(--gray);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
+@media(max-width:768px){.split{grid-template-columns:1fr;gap:48px;}}
+.split-body{font-size:.9rem;color:rgba(241,241,241,.6);line-height:1.85;}
+.split-body p+p{margin-top:18px;}
+.side-cards{display:flex;flex-direction:column;gap:1px;}
+.side-card{background:var(--black);padding:26px 30px;border-left:2px solid transparent;transition:border-color .25s,background .2s,padding-left .2s;}
+.side-card:hover{border-left-color:var(--accent);background:#080808;padding-left:36px;}
+.side-card-title{font-family:var(--display);font-size:1.4rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px;}
+.side-card-body{font-size:.82rem;color:rgba(241,241,241,.45);line-height:1.7;}
+.grid-4{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;margin-top:56px;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:56px;}
+@media(max-width:640px){.grid-2{grid-template-columns:1fr;}}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:52px;}
+@media(max-width:768px){.grid-3{grid-template-columns:1fr;}}
+/* numbered card */
+.num-card{background:var(--gray);padding:48px 40px;position:relative;overflow:hidden;transition:background .2s;}
+.num-card::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .35s;}
+.num-card:hover{background:var(--mid);}
+.num-card:hover::after{transform:scaleX(1);}
+.num-card-n{font-family:var(--display);font-size:4rem;color:rgba(219,201,180,.08);line-height:1;margin-bottom:16px;letter-spacing:.04em;}
+.num-card-title{font-family:var(--display);font-size:1.7rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;}
+.num-card-body{font-size:.84rem;color:rgba(241,241,241,.5);line-height:1.75;}
+/* top-border card */
+.top-card{background:var(--black);padding:44px 38px;border-top:2px solid rgba(241,241,241,.06);transition:border-top-color .2s,background .2s;}
+.top-card:hover{border-top-color:var(--accent);background:#060606;}
+.top-card-title{font-family:var(--display);font-size:1.6rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;}
+.top-card-body{font-size:.84rem;color:rgba(241,241,241,.5);line-height:1.75;}
+.top-card-detail{font-size:.62rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);opacity:.65;margin-top:14px;}
+/* step card */
+.step-card{background:var(--gray);padding:44px 38px;position:relative;}
+.step-card-num{font-family:var(--display);font-size:4.5rem;color:rgba(219,201,180,.06);line-height:1;margin-bottom:16px;}
+.step-card-title{font-family:var(--display);font-size:1.5rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;}
+.step-card-body{font-size:.84rem;color:rgba(241,241,241,.5);line-height:1.75;}
+/* price card */
+.price-card{background:var(--gray);padding:52px 44px;}
+.price-note{margin-top:36px;font-size:.78rem;color:var(--muted);max-width:640px;line-height:1.7;}
+/* audience card */
+.audience-card{background:var(--gray);padding:52px 44px;}
+.audience-num{font-family:var(--display);font-size:5rem;color:rgba(219,201,180,.06);line-height:1;margin-bottom:-4px;}
+.audience-title{font-family:var(--display);font-size:2rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px;}
+.audience-body{font-size:.88rem;color:rgba(241,241,241,.55);line-height:1.8;}
+.audience-detail{margin-top:18px;font-size:.62rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);opacity:.65;}
+/* session tags */
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px;}
+.tag{font-size:.62rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(219,201,180,.2);color:rgba(219,201,180,.55);padding:5px 12px;}
+/* split with image */
+.split-img{padding:100px 7vw;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+@media(max-width:768px){.split-img{grid-template-columns:1fr;gap:48px;}}
+/* dark section */
+.dark-section{padding:100px 7vw;background:var(--gray);}
+.light-section{padding:100px 7vw;}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">
+    CNTRL<span class="nav-logo-sub">Futbol</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" >Home</a></li>
+    <li class="nav-dropdown">
+      <button class="nav-dropdown-toggle">Training
+        <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg>
+      </button>
+      <div class="nav-dropdown-menu">
+        <a href="private-training.html" >Private Training</a>
+        <a href="small-group.html" class="active">Small Group Training</a>
+        <a href="team-training.html" >Team &amp; Skills Training</a>
+      </div>
+    </li>
+    <li><a href="about.html" >About</a></li>
+    <li><a href="contact.html" >Contact</a></li>
+    <li><a href="contact.html" class="nav-cta">Book Evaluation</a></li>
+  </ul>
+  <button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="private-training.html" class="mobile-sub">Private Training</a>
+  <a href="small-group.html" class="mobile-sub">Small Group</a>
+  <a href="team-training.html" class="mobile-sub">Team &amp; Skills</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" style="color:var(--accent);margin-top:8px;">Book Evaluation →</a>
+</div>
+<section class="hero">
+  <div class="hero-img-wrap"><div class="img-placeholder" style="width:100%;aspect-ratio:unset;">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+  <span class="ph-label">Small group session — 2-4 players training</span>
+  <span class="ph-code">images/small-group-hero.jpg</span>
+</div></div>
+  <div class="hero-content">
+    <p class="hero-tag">Small Group Training · 2–4 Players · Northern NJ</p>
+    <h1 class="hero-title">Train<br>Together.<br><em>Rise.</em></h1>
+    <p class="hero-sub">The intensity of competition. The depth of individual coaching. With a max of 4 players, every rep still matters — while the group adds live pressure that solo work can't replicate.</p>
+    <div class="hero-cta-row"><a href="contact.html" class="btn-primary">Book Evaluation</a><a href="#pricing" class="btn-ghost">View Pricing</a></div>
+    <div class="hero-stat-bar">
+      <div class="stat"><span class="stat-num">2–4</span><span class="stat-label">Players per session</span></div>
+      <div class="stat"><span class="stat-num">60</span><span class="stat-label">Min sessions</span></div>
+      <div class="stat"><span class="stat-num">$45+</span><span class="stat-label">Per player</span></div>
+      <div class="stat"><span class="stat-num">Free</span><span class="stat-label">Evaluation</span></div>
+    </div>
+  </div><div class="hero-accent-line"></div>
+</section>
+
+<section class="split reveal">
+  <div>
+    <p class="section-label">Why Small Group</p><h2 class="section-title">The Best of Both Worlds</h2>
+    <div class="split-body">
+      <p>Private training gives you attention. Team practice gives you competition. Small group training gives you both.</p>
+      <p>With a cap of 4 players, every rep still matters and sessions are still built around individual development. But the presence of serious players adds live pressure, competitive repetition, and a standard that only comes from training alongside others who are working just as hard.</p>
+      <p>Sessions are structured, focused, and demanding. No filler. No standing in line.</p>
+    </div>
+  </div>
+  <div class="side-cards">
+    <div class="side-card"><div class="side-card-title">Individual Attention</div><div class="side-card-body">Max 4 players — your technique is still coached in real time, not lost in a crowd.</div></div>
+    <div class="side-card"><div class="side-card-title">Live Competition</div><div class="side-card-body">Rondos, 1v1s, and possession games at full speed. The group creates pressure solo work can't.</div></div>
+    <div class="side-card"><div class="side-card-title">Shared Standard</div><div class="side-card-body">Every player in the group is serious. The environment reflects that — and it raises everyone.</div></div>
+    <div class="side-card"><div class="side-card-title">Cost-Effective</div><div class="side-card-body">High-quality technical coaching at a lower per-session cost than private training.</div></div>
+  </div>
+</section>
+
+<section class="light-section reveal">
+  <p class="section-label">Session Focus</p><h2 class="section-title">What We Work On</h2>
+  <div class="grid-4">
+    <div class="num-card"><div class="num-card-n">01</div><div class="num-card-title">Technical Reps Under Pressure</div><div class="num-card-body">First touch, passing combinations, and receiving mechanics executed at pace — with defenders, time pressure, and competitive consequence.</div></div>
+    <div class="num-card"><div class="num-card-n">02</div><div class="num-card-title">Possession &amp; Pressing</div><div class="num-card-body">Rondos and small-sided games that build the ability to keep the ball, break pressure, and win it back intelligently.</div></div>
+    <div class="num-card"><div class="num-card-n">03</div><div class="num-card-title">1v1 &amp; 2v2 Scenarios</div><div class="num-card-body">Attacking and defending in tight spaces. Decision-making, body positioning, and executing under live defensive pressure.</div></div>
+    <div class="num-card"><div class="num-card-n">04</div><div class="num-card-title">Position-Specific Detail</div><div class="num-card-body">Sessions are adapted to the players in the group. Role-specific coaching for wingers, midfielders, forwards, and defenders.</div></div>
+  </div>
+</section>
+
+<section class="dark-section reveal">
+  <p class="section-label">Who It's For</p><h2 class="section-title">Built for Serious Players</h2>
+  <div class="grid-3">
+    <div class="top-card"><div class="top-card-title">Travel &amp; Club Players</div><div class="top-card-body">Players at the travel or club level who want to close the gap to their next level. Sessions match the demands of competitive environments.</div></div>
+    <div class="top-card"><div class="top-card-title">High School Varsity</div><div class="top-card-body">Athletes preparing for seasons or college exposure who need consistent technical training outside of team practice.</div></div>
+    <div class="top-card"><div class="top-card-title">Groups Training Together</div><div class="top-card-body">Teammates or players at a similar level who want to train with purpose. You assemble the group — we build the sessions.</div></div>
+  </div>
+</section>
+
+<section class="light-section reveal" id="pricing">
+  <p class="section-label">Pricing</p><h2 class="section-title">Straightforward Rates</h2>
+  <div class="grid-4" style="margin-top:56px;">
+    <div class="price-card"><span class="price-badge">Drop-In</span><div class="price-name">Single Session</div><div class="price-amount">$45<span style="font-size:1.8rem">+</span></div><div class="price-per">per player · 60 minutes</div><div class="price-divider"></div><ul class="price-features"><li>60-minute structured session</li><li>2–4 players per group</li><li>No commitment required</li><li>NNJ locations</li></ul></div>
+    <div class="price-card price-card-featured"><span class="price-badge">Most Popular</span><div class="price-name">Monthly Package</div><div class="price-amount">$40<span style="font-size:1.8rem">+</span></div><div class="price-per">per player · 4 sessions/month</div><div class="price-divider"></div><ul class="price-features"><li>4 sessions per month</li><li>Priority scheduling</li><li>Progress tracking &amp; adjustments</li><li>Best value for development</li></ul></div>
+    <div class="price-card"><span class="price-badge">Best Value</span><div class="price-name">10-Session Block</div><div class="price-amount">$38<span style="font-size:1.8rem">+</span></div><div class="price-per">per player · use anytime</div><div class="price-divider"></div><ul class="price-features"><li>10 sessions on your schedule</li><li>Development plan included</li><li>Lowest per-session rate</li><li>Ideal for pre-season prep</li></ul></div>
+  </div>
+  <p class="price-note">* Exact pricing confirmed at evaluation. Groups can be self-assembled — reach out to discuss options.</p>
+</section>
+
+<section class="dark-section reveal">
+  <p class="section-label">Common Questions</p><h2 class="section-title">FAQs</h2>
+  <div class="faq-list" style="max-width:800px;">
+    <div class="faq-item">
+  <button class="faq-q">Can I bring my own group?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+  <div class="faq-a">Yes — and it's encouraged. Assemble a group of 2–4 players at a similar level and we'll build sessions specifically for that group.</div>
+</div>
+    <div class="faq-item">
+  <button class="faq-q">What if I don't have a group?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+  <div class="faq-a">We can place you in an existing group of players at a similar level. Reach out through the contact page and we'll find the right fit.</div>
+</div>
+    <div class="faq-item">
+  <button class="faq-q">How is this different from private training?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+  <div class="faq-a">Private is entirely 1-on-1. Small group adds a competitive layer — live pressure, 1v1s, possession games — while still keeping the group tight enough for individual coaching. Some players do both.</div>
+</div>
+    <div class="faq-item">
+  <button class="faq-q">What ages do you train?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+  <div class="faq-a">We work with players from age 7 through college level. Groups are formed with age and ability level in mind.</div>
+</div>
+  </div>
+</section>
+
+<div class="cta-band reveal"><div><div class="cta-band-title">Ready to find your group?</div><div class="cta-band-sub">Book a free evaluation and we'll place you in the right session.</div></div><a href="contact.html" class="btn-dark">Book Free Evaluation</a></div>
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">CNTRL</div>
+      <div class="footer-brand-sub">Futbol</div>
+      <div class="footer-tagline">Elite technical soccer training in Northern New Jersey. Built on experience. Built on standards.</div>
+      <div class="footer-contact-item"><a href="mailto:info@cntrlfutbol.com">info@cntrlfutbol.com</a></div>
+      <div class="footer-contact-item"><a href="tel:9735708254">(973) 570-8254</a></div>
+    </div>
+    <div>
+      <div class="footer-col-title">Training</div>
+      <ul class="footer-links">
+        <li><a href="private-training.html">Private Training</a></li>
+        <li><a href="small-group.html">Small Group</a></li>
+        <li><a href="team-training.html">Team &amp; Skills</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html">Book Evaluation</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Locations</div>
+      <ul class="footer-links">
+        <li><a href="#">Passaic County NJ</a></li>
+        <li><a href="#">Bergen County NJ</a></li>
+        <li><a href="#">Morris County NJ</a></li>
+        <li><a href="#">Essex County NJ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 CNTRL Futbol. All rights reserved.</span>
+    <span>Northern New Jersey</span>
+  </div>
+</footer>
+<script src="js/main.js"></script></body></html>

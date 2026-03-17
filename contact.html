@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact & Book Evaluation | CNTRL Futbol</title>
+<meta name="description" content="Book your free evaluation with CNTRL Futbol. Elite soccer training in Northern NJ. Call (973) 570-8254 or fill out our contact form.">
+<meta property="og:title" content="Contact & Book Evaluation | CNTRL Futbol">
+<meta property="og:description" content="Book your free evaluation with CNTRL Futbol. Elite soccer training in Northern NJ. Call (973) 570-8254 or fill out our contact form.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cntrlfutbol.com/">
+<meta property="og:image" content="https://cntrlfutbol.com/images/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://cntrlfutbol.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.contact-hero{min-height:55vh;padding:160px 7vw 80px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;}
+.contact-hero-tag{font-size:.65rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);opacity:.8;margin-bottom:28px;opacity:0;animation:fadeUp .6s .1s forwards;}
+.contact-hero-title{font-family:var(--display);font-size:clamp(4rem,10vw,9rem);line-height:.88;letter-spacing:.04em;text-transform:uppercase;margin-bottom:32px;opacity:0;animation:fadeUp .75s .25s forwards;}
+.contact-hero-title em{font-style:normal;color:var(--accent);}
+.contact-hero-sub{max-width:520px;font-size:.95rem;color:rgba(241,241,241,.6);line-height:1.8;opacity:0;animation:fadeUp .7s .45s forwards;}
+.contact-layout{padding:80px 7vw 100px;display:grid;grid-template-columns:1fr 1.5fr;gap:80px;align-items:start;}
+@media(max-width:860px){.contact-layout{grid-template-columns:1fr;gap:60px;}}
+.contact-info-title{font-family:var(--display);font-size:2.2rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:32px;}
+.info-items{display:flex;flex-direction:column;gap:1px;margin-bottom:48px;}
+.info-item{background:var(--gray);padding:20px 22px;display:flex;align-items:center;gap:16px;transition:background .2s;}
+.info-item:hover{background:var(--mid);}
+.info-icon{width:34px;height:34px;background:rgba(219,201,180,.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.info-icon svg{width:15px;height:15px;color:var(--accent);}
+.info-label{font-size:.6rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:3px;}
+.info-value{font-size:.9rem;color:var(--white);}
+.info-value a{color:inherit;text-decoration:none;transition:color .2s;}
+.info-value a:hover{color:var(--accent);}
+.locations-title{font-size:.62rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;}
+.locations-pills{display:flex;flex-wrap:wrap;gap:1px;}
+.loc-pill{background:var(--gray);padding:10px 18px;font-size:.78rem;color:rgba(241,241,241,.45);}
+.form-card{background:var(--gray);padding:52px 48px;}
+@media(max-width:600px){.form-card{padding:36px 28px;}}
+.form-title{font-family:var(--display);font-size:2rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;}
+.form-sub{font-size:.8rem;color:var(--muted);margin-bottom:36px;}
+.form-group{margin-bottom:18px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media(max-width:520px){.form-row{grid-template-columns:1fr;}}
+label{display:block;font-size:.6rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
+input,select,textarea{width:100%;background:var(--mid);border:1px solid rgba(241,241,241,.06);color:var(--white);font-family:var(--body);font-size:.88rem;font-weight:300;padding:13px 16px;outline:none;transition:border-color .2s;-webkit-appearance:none;appearance:none;}
+input:focus,select:focus,textarea:focus{border-color:rgba(219,201,180,.35);}
+input::placeholder,textarea::placeholder{color:rgba(241,241,241,.18);}
+select{cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23666' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;}
+select option{background:var(--mid);}
+textarea{resize:vertical;min-height:120px;}
+.form-submit{width:100%;background:var(--accent);color:var(--black);font-family:var(--body);font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;border:none;padding:18px;cursor:pointer;margin-top:8px;transition:background .2s,transform .15s;}
+.form-submit:hover{background:#e8d8c4;transform:translateY(-1px);}
+.form-note{font-size:.7rem;color:var(--muted);margin-top:12px;text-align:center;}
+.form-success{display:none;text-align:center;padding:60px 0;}
+.form-success-icon{font-family:var(--display);font-size:5rem;color:var(--accent);line-height:1;margin-bottom:16px;}
+.form-success-title{font-family:var(--display);font-size:2.2rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;}
+.form-success-body{font-size:.88rem;color:var(--muted);}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">
+    CNTRL<span class="nav-logo-sub">Futbol</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" >Home</a></li>
+    <li class="nav-dropdown">
+      <button class="nav-dropdown-toggle">Training
+        <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg>
+      </button>
+      <div class="nav-dropdown-menu">
+        <a href="private-training.html" >Private Training</a>
+        <a href="small-group.html" >Small Group Training</a>
+        <a href="team-training.html" >Team &amp; Skills Training</a>
+      </div>
+    </li>
+    <li><a href="about.html" >About</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+    <li><a href="contact.html" class="nav-cta">Book Evaluation</a></li>
+  </ul>
+  <button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="private-training.html" class="mobile-sub">Private Training</a>
+  <a href="small-group.html" class="mobile-sub">Small Group</a>
+  <a href="team-training.html" class="mobile-sub">Team &amp; Skills</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" style="color:var(--accent);margin-top:8px;">Book Evaluation →</a>
+</div>
+<section class="contact-hero">
+  <p class="contact-hero-tag">Get in Touch</p>
+  <h1 class="contact-hero-title">Let's<br><em>Get</em><br>To Work.</h1>
+  <p class="contact-hero-sub">Book your free evaluation session. We'll assess where you are, build a development plan, and get started.</p>
+</section>
+
+<div class="contact-layout reveal">
+  <div>
+    <div class="contact-info-title">Reach Out Directly</div>
+    <div class="info-items">
+      <div class="info-item"><div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012.03 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg></div><div><div class="info-label">Phone</div><div class="info-value"><a href="tel:9735708254">(973) 570-8254</a></div></div></div>
+      <div class="info-item"><div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="info-label">Email</div><div class="info-value"><a href="mailto:info@cntrlfutbol.com">info@cntrlfutbol.com</a></div></div></div>
+    </div>
+    <div class="locations-title">Training Locations</div>
+    <div class="locations-pills">
+      <div class="loc-pill">Passaic County</div><div class="loc-pill">Bergen County</div><div class="loc-pill">Morris County</div><div class="loc-pill">Essex County</div>
+    </div>
+  </div>
+
+  <div class="form-card">
+    <div id="formWrap">
+      <div class="form-title">Book Your Evaluation</div>
+      <div class="form-sub">Free for all new players. No commitment required.</div>
+      <form id="contactForm" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group"><label for="firstName">First Name</label><input type="text" id="firstName" placeholder="First name" required></div>
+          <div class="form-group"><label for="lastName">Last Name</label><input type="text" id="lastName" placeholder="Last name" required></div>
+        </div>
+        <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" placeholder="you@email.com" required></div>
+        <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" placeholder="(973) 000-0000"></div>
+        <div class="form-row">
+          <div class="form-group"><label for="age">Player Age</label><input type="text" id="age" placeholder="e.g. 14"></div>
+          <div class="form-group"><label for="training">Training Type</label><select id="training"><option value="">Select type...</option><option>Private Training</option><option>Small Group Training</option><option>Team &amp; Skills Training</option><option>Not sure yet</option></select></div>
+        </div>
+        <div class="form-group"><label for="county">Your County</label><select id="county"><option value="">Select county...</option><option>Passaic County</option><option>Bergen County</option><option>Morris County</option><option>Essex County</option><option>Other NJ County</option></select></div>
+        <div class="form-group"><label for="message">Tell Us About Your Player / Team</label><textarea id="message" placeholder="Current level, goals, availability..."></textarea></div>
+        <button type="submit" class="form-submit">Request Free Evaluation →</button>
+        <p class="form-note">We typically respond within 24 hours.</p>
+      </form>
+    </div>
+    <div class="form-success" id="formSuccess">
+      <div class="form-success-icon">✓</div>
+      <div class="form-success-title">Request Sent!</div>
+      <div class="form-success-body">We'll be in touch within 24 hours to schedule your free evaluation.</div>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">CNTRL</div>
+      <div class="footer-brand-sub">Futbol</div>
+      <div class="footer-tagline">Elite technical soccer training in Northern New Jersey. Built on experience. Built on standards.</div>
+      <div class="footer-contact-item"><a href="mailto:info@cntrlfutbol.com">info@cntrlfutbol.com</a></div>
+      <div class="footer-contact-item"><a href="tel:9735708254">(973) 570-8254</a></div>
+    </div>
+    <div>
+      <div class="footer-col-title">Training</div>
+      <ul class="footer-links">
+        <li><a href="private-training.html">Private Training</a></li>
+        <li><a href="small-group.html">Small Group</a></li>
+        <li><a href="team-training.html">Team &amp; Skills</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html">Book Evaluation</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Locations</div>
+      <ul class="footer-links">
+        <li><a href="#">Passaic County NJ</a></li>
+        <li><a href="#">Bergen County NJ</a></li>
+        <li><a href="#">Morris County NJ</a></li>
+        <li><a href="#">Essex County NJ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 CNTRL Futbol. All rights reserved.</span>
+    <span>Northern New Jersey</span>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  document.getElementById('formWrap').style.display='none';
+  document.getElementById('formSuccess').style.display='block';
+}
+</script>
+</body></html>
